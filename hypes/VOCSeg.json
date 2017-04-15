@@ -1,0 +1,215 @@
+{
+    "model": {
+        "input_file": "../inputs/voc_seg_input.py",
+        "architecture_file": "../encoder/fcn8_vgg.py",
+        "objective_file": "../decoder/voc_multiloss.py",
+        "optimizer_file": "../optimizer/generic_optimizer.py",
+        "evaluator_file": "../evals/voc_eval.py"
+    },
+    "path": [
+        "../incl"
+    ],
+    "classes": [
+        {
+            "name": "background",
+            "colors": [
+                "/#000000"
+            ]
+        },
+        {
+            "name": "bicycle",
+            "colors": [
+                "/#008000"
+            ]
+        },
+        {
+            "name": "aeroplane",
+            "colors": [
+                "/#800000"
+            ]
+        },
+        {
+            "name": "bird",
+            "colors": [
+                "/#808000"
+            ]
+        },
+        {
+            "name": "boat",
+            "colors": [
+                "/#000080"
+            ]
+        },
+        {
+            "name": "bottle",
+            "colors": [
+                "/#800080"
+            ]
+        },
+        {
+            "name": "bus",
+            "colors": [
+                "/#008080"
+            ]
+        },
+        {
+            "name": "chair",
+            "colors": [
+                "/#C00000"
+            ]
+        },
+        {
+            "name": "car",
+            "colors": [
+                "/#808080"
+            ]
+        },
+        {
+            "name": "cat",
+            "colors": [
+                "/#400000"
+            ]
+        },
+        {
+            "name": "cow",
+            "colors": [
+                "/#408000"
+            ]
+        },
+        {
+            "name": "diningtable",
+            "colors": [
+                "/#C08000"
+            ]
+        },
+        {
+            "name": "dog",
+            "colors": [
+                "/#400080"
+            ]
+        },
+        {
+            "name": "horse",
+            "colors": [
+                "/#C00080"
+            ]
+        },
+        {
+            "name": "motorbike",
+            "colors": [
+                "/#408080"
+            ]
+        },
+        {
+            "name": "person",
+            "colors": [
+                "/#C08080"
+            ]
+        },
+        {
+            "name": "pottedplant",
+            "colors": [
+                "/#004000"
+            ]
+        },
+        {
+            "name": "sheep",
+            "colors": [
+                "/#804000"
+            ]
+        },
+        {
+            "name": "sofa",
+            "colors": [
+                "/#00C000"
+            ]
+        },
+        {
+            "name": "train",
+            "colors": [
+                "/#80C000"
+            ]
+        },
+        {
+            "name": "tvmonitor",
+            "colors": [
+                "/#004080"
+            ]
+        }
+    ],
+    "data": {
+        "train_file": "VOC2012/train.lst",
+        "val_file": "VOC2012/val.lst",
+        "vgg_url": "ftp://mi.eng.cam.ac.uk/pub/mttt2/models/vgg16.npy",
+        "kitti_url": ""
+    },
+    "arch": {
+        "fcn_in": "fc7",
+        "num_classes": 21,
+        "image_size": 50,
+        "weight": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "num_channels": 3,
+        "whitening": false
+    },
+    "jitter": {
+        "random_resize": false,
+        "lower_size": 0.4,
+        "upper_size": 1.7,
+        "sig": 0.15,
+        "res_chance": 0.4,
+        "random_crop": true,
+        "max_crop": 32,
+        "crop_patch": false,
+        "patch_height": 256,
+        "patch_width": 256,
+        "crop_chance": 0.8,
+        "fix_shape": false,
+        "reseize_image": true,
+        "image_height": 224,
+        "image_width": 224,
+        "augment_level": 2
+    },
+    "logging": {
+        "display_iter": 2,
+        "eval_iter": 2,
+        "write_iter": 2000,
+        "save_iter": 2000,
+        "image_iter": 20000
+    },
+    "solver": {
+        "opt": "Adam",
+        "batch_size": 1,
+        "epsilon": 1e-9,
+        "adam_eps": 0.00001,
+        "threads": 4,
+        "learning_rate": 0.00001,
+        "learning_rate_step": null,
+        "max_steps": 12000
+    },
+    "use_fc_wd": true,
+    "loss": "xentropy",
+    "clip_norm": 1,
+    "wd": 0.0005
+}
