@@ -29,7 +29,7 @@ Those modules can be installed using: `pip install numpy scipy pillow matplotlib
 1. Clone this repository: `git clone https://github.com/lxh-123/VOCSeg.git`
 2. Initialize all submodules: `git submodule update --init --recursive`
 3. [Optional] Download VOC2012 Data:
-    1. Retrieve voc data url here: [baidu.yun]((https://pan.baidu.com/s/1bgz4PC#list/path=%2Ffcn-xs)
+    1. Retrieve voc data url here: [baidu.yun](https://pan.baidu.com/s/1bgz4PC#list/path=%2Ffcn-xs)
 	2. Extract it. the file/folder will be like:  ```JPEGImages folder```, ```SegmentationClass folder```, ```train.lst```, ```val.lst```, ```test.lst```
     3. You can download the ```VOC2012.rar``` by `python download_data.py --voc_url URL_YOU_RETRIEVED` with [URL_YOU_RETRIEVED](https://1gr3drmt1gehnhctwfa3drqy.ourdvsss.com/d1.baidupcs.com/file/78c7a07fb84872dec694710421385783?bkt=p3-00008531c4ef92fda5820a5d7364f9afd67b&xcode=c1823eacc220b672991d0c1e17e7c41a5e586fdfeae62c96&fid=1108131987-250528-1065095129425413&time=1492270471&sign=FDTAXGERLBHS-DCb740ccc5511e5e8fedcff06b081203-TfiymBcNBMFeaxMJuu0NE2RLa9U%3D&to=d1&size=1925237973&sta_dx=1925237973&sta_cs=86&sta_ft=rar&sta_ct=7&sta_mt=7&fm2=MH,Ningbo,Netizen-anywhere,,none,any&newver=1&newfm=1&secfm=1&flow_ver=3&pkey=00008531c4ef92fda5820a5d7364f9afd67b&sl=76480590&expires=8h&rt=sh&r=392358634&mlogid=2434836111737062527&vuk=3441664655&vbdid=3965437593&fin=VOC2012.rar&fn=VOC2012.rar&rtype=1&iv=0&dp-logid=2434836111737062527&dp-callid=0.1.1&hps=1&csl=80&csign=rE171saMlREykHOO%2BZfmD9sP5PQ%3D&by=themis&wshc_tag=0&wsts_tag=58f23d8c&wsid_tag=6739a41c&wsiphost=ipdbm)
 
