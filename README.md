@@ -2,7 +2,9 @@
 
 VOCSeg performs segmentation of voc2012 by utilizing an FCN based model. 
 
-VOCSeg model is cloned from [KittiSeg model](https://github.com/MarvinTeichmann/KittiSeg.git)
+VOCSeg model is firstly cloned from [KittiSeg model](https://github.com/MarvinTeichmann/KittiSeg.git) 
+
+Based on KittiSeg model, we make some modifications for multi-class segmentation.
 
 KittiSeg model which is achieved [first place](http://www.cvlibs.net/datasets/kitti/eval_road_detail.php?result=ca96b8137feb7a636f3d774c408b1243d8a6e0df) on the Kitti Road Detection Benchmark at submission time. Check out their [paper](https://arxiv.org/abs/1612.07695) for a detailed model description.
 
